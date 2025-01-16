@@ -9,6 +9,13 @@
 <body>
     <header>
         <div class="logo">Logo</div>
+
+        <div class="burger" onclick="ToggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+
+        </div>
         <nav>
             <ul>
                 <li><a href="#">Accueil</a></li>
@@ -35,5 +42,12 @@
     <footer>
         <p>© 2025 Votre entreprise. Tous droits réservés.</p>
     </footer>
+
+    <script>
+         function ToggleMenu() {
+            let nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+         }
+    </script>
 </body>
 </html>
