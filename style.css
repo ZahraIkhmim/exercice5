@@ -1,6 +1,6 @@
-/* styles.css */
-body {
+body, header, footer {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
     color: #333;
 }
@@ -19,6 +19,23 @@ header .logo {
     font-weight: bold;
 }
 
+/* Menu burger */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.burger .bar {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+}
+
+/* Navigation */
 header nav ul {
     list-style: none;
     display: flex;
@@ -36,13 +53,40 @@ header nav ul li a {
     font-size: 1em;
 }
 
+/* Style responsive */
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    header nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    header nav.active {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Contenu principal */
 main {
     padding: 20px;
     text-align: center;
-}
-
-main section {
-    margin-bottom: 40px;
 }
 
 .image-container {
@@ -54,6 +98,7 @@ main section {
     height: auto;
 }
 
+/* Footer */
 footer {
     background-color: #333;
     color: white;
